@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: factoryBackend
+  datasource:
+    url: jdbc:mysql://localhost:3306/factory_db
+    username: factory
+    password: factory
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+    validate-migration-naming: true
+server:
+  port: 8081

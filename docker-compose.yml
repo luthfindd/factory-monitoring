@@ -1,0 +1,21 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: fd-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: factory_db
+      MYSQL_USER: factory
+      MYSQL_PASSWORD: factory
+      TZ: UTC
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  mysql_data:
