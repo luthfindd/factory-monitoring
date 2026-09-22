@@ -1,5 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-import type { ProductionTrendPointResponse } from '../types/dashborad'
+import type { ProductionTrendPointResponse } from '../types/dashboard'
 
 export default function ProductionTrendChart({ data }: { data: ProductionTrendPointResponse[] }) {
   const chartData = data.map((d) => ({

@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import type { OeeTrendPointResponse } from '../types/dashborad'
+import type { OeeTrendPointResponse } from '../types/dashboard'
 
 function formatHour(iso: string) {
   return new Date(iso).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })

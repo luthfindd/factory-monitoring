@@ -1,4 +1,4 @@
-import type { AlarmResponse } from '../types/dashborad'
+import type { AlarmResponse } from '../types/dashboard'
 const levelColor: Record<string, string> = {
   CRITICAL: 'text-red-400',
   HIGH: 'text-orange-400',

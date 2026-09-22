@@ -1,4 +1,4 @@
-import type { EquipmentStatusResponse } from '../types/dashborad'
+import type { EquipmentStatusResponse } from '../types/dashboard'
 
 function formatDuration(seconds: number) {
   const h = Math.floor(seconds / 3600)

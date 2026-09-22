@@ -17,5 +17,28 @@ services:
       interval: 5s
       retries: 10
 
+  backend:
+    build:
+      context: ./factoryBackend
+    container_name: fd-backend
+    environment:
+      DB_HOST: db
+    ports:
+      - "8081:8081"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:8081/api
+    container_name: fd-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
 volumes:
   mysql_data:

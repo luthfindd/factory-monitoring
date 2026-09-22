@@ -2,7 +2,7 @@ spring:
   application:
     name: factoryBackend
   datasource:
-    url: jdbc:mysql://localhost:3306/factory_db
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/factory_db
     username: factory
     password: factory
   jpa:
@@ -18,5 +18,5 @@ server:
   port: 8081
 app:
   jwt:
-    secret: "belajaruntukmerewindjavaspringboot"
+    secret: "ganti-dengan-string-acak-minimal-32-karakter-untuk-belajar"
     expiration-minutes: 60
