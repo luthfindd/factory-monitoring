@@ -16,3 +16,7 @@ spring:
     validate-migration-naming: true
 server:
   port: 8081
+app:
+  jwt:
+    secret: "belajaruntukmerewindjavaspringboot"
+    expiration-minutes: 60
