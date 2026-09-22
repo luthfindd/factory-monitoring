@@ -23,4 +23,19 @@ public class DashboardController {
     public List<OeeTrendPointResponse> oeeTrend() {
         return service.getOeeTrend();
     }
+
+    @GetMapping("/equipment-status")
+    public List<EquipmentStatusResponse> equipmentStatus() {
+        return service.getEquipmentStatus();
+    }
+
+    @GetMapping("/production-trend")
+    public List<ProductionTrendPointResponse> productionTrend() {
+        return service.getProductionTrend();
+    }
+
+    @GetMapping("/production-summary")
+    public ProductionSummaryResponse productionSummary() {
+        return service.getProductionSummary();
+    }
 }
